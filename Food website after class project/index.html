@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: rgb(194, 217, 230);
+        }
+
+        .navigation-link {
+            position: relative;
+            
+            text-decoration: none !important;
+            
+            color: #333;
+            
+            padding: 6px 0;
+            
+            transition: color 0.3s ease;
+            
+        }
+
+        .navigation-link::after {
+            content: '';
+            
+            position: absolute;
+            
+            left: 0;
+            
+            bottom: 0;
+            
+            width: 0;
+            
+            height: 2px;
+            
+            background-color: rgb(255, 255, 255);
+            text-decoration: none;
+            transition: width 0.3s ease;
+            
+        }
+
+        .navigation-link:hover::after {
+            width: 100%;
+            text-decoration: none;
+        }
+
+        
+        .nav-item {
+            display: inline-block;
+        }
+        header{
+            background-color: rgb(4, 7, 32);
+            height:80px;
+        }
+        img{
+            
+            width:1318px;
+            height:500px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    <div class="container navigation pt-3">
+        <div class="row">
+            <div class="col-4 justify-content-start align-items-center">
+                <i class="fas fa-code fa-2x text-warning pb-2"></i>
+                <h2 class="d-inline pl-2 text-white size-40px">🍽️ Fiesty Fork</h2>
+            </div>
+            <div class="col-6 pt-2">
+                <div class="row text-center text-white justify-content-end align-items-center p-0 d-flex">
+                    <div class="col-3 nav-item">
+                        <a href="#" class="text-white navigation-link ">Home</a>
+                    </div>
+                    <div class="col-3 nav-item">
+                        <a href="#" class="text-white navigation-link">About us</a>
+                    </div>
+                    <div class="col-3 nav-item">
+                        <a href="#" class="text-white navigation-link">Menu</a>
+                    </div>
+                    <div class="col-3 nav-item">
+                        <a href="#" class="text-white navigation-link">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></header>
+    <img src="image.png">
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <style>
+     form{
+        border: 2px solid gainsboro;
+        background-color: rgb(204, 209, 209);
+        justify-content: center;
+        justify-items: center;
+        margin-top: 0px;
+        margin-left: 400px;
+        padding-top: 40px;
+        width: 500px;
+        text-align: center;
+     }
+     h1{
+        text-align: center;
+        margin-top: 160px;
+        color:blue;
+        text-decoration:underline;
+        text-shadow: 1px 1px 7px rgb(182, 221, 182);
+     }
+     .legend{
+        font-size: 20px;
+        margin-left: 400px;
+        margin-top: 10px;
+     }
+
+    </style>
+    
+</head>
+<body>
+    <h3>Topic:</h3>
+    <p>Form validation in JavaScript </p>
+    <h1>Login form</h1>
+    <script>
+        function validateform(){
+      var Name = document.forms["myform"]["fname"].value;
+      var LastName = document.forms["myform"]["lname"].value;
+      var Age = document.forms["myform"]["id1"].value;
+      var Email = document.forms["myform"]["email"].value;
+      if ( Name =="" || LastName =="" || Age =="" | Email ==""){
+      alert ("Please enter the value");
+    return false;}
+    else 
+    alert ("Form submitted successfully");
+        }
+    </script>
+    
+        <legend class="legend">Please enter valid information</legend>
+    <form name="myform" onsubmit="validateform()">
+        
+        
+        Name: <input type="text"  name="fname"><br><br>
+        Last Name: <input type="text" name="lname"><br><br>
+        Age: <input type="number" id="id1"  min="18"><br><br>
+        Email:<input type="email" name="email"><br><br>
+        <input type="submit" value="Login">
+        <p id="message"></p>
+        
+        
+        
+    </form>
+    
+    
+    
+</body>
+</html>

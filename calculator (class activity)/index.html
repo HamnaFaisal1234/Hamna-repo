@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <meta name="description" content="" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+    background: #bddbe4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+    <h1 class="text-primary d-flex justify-content-center pt-5">Calculator</h1>
+    <div class="container">
+     <div class="Calculator">
+        <div id="history">
+            <p id="history-value"></p>
+        </div>
+        <div id="output">
+            <p id="output-value"></p>
+        </div>
+        <input type="result" name="result" class="result" id="result" value="" placeholder="0" readonly style="width:250px; height:50px;"><br>
+        <div class="row " >
+        <button type="button" class="operator col-3" id="clear" >C</button>
+        <button type="button" class="operator col-3" id="CE">CE</button>
+        <button type="button" class="operator col-3" id="%">%</button>
+        <button type="button" class="operator col-3" id="%">&#247</button></div>
+        <div class="row">
+        <button type="button" class="number col-3" id="7">7</button>
+        <button type="button" class="number col-3" id="8">8</button>
+        <button type="button" class="number col-3" id="9">9</button>
+        <button type="button" class="operator col-3" id="*">*</button></div>
+        <div class="row">
+        <button type="button" class="number col-3" id="6">6</button>
+        <button type="button" class="operator col-3" id="-">-</button>
+        <button type="button" class="number col-3" id="1">1</button>
+        <button type="button" class="number col-3" id="2">2</button></div>
+        <div class="row">
+        <button type="button" class="number col-3" id="3">3</button>
+        <button type="button" class="operator col-3" id="+">+</button></div>
+     </div><br>
+    </div></div>
+</body>
+</html>

@@ -1,0 +1,215 @@
+.navigation-link {
+    position: relative;
+
+    text-decoration: none !important;
+
+    color: #333;
+
+    padding: 6px 0;
+
+    transition: color 0.3s ease;
+
+}
+
+.navigation-link::after {
+    content: '';
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 0;
+
+    height: 2px;
+
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: width 0.3s ease;
+
+}
+
+.navigation-link:hover::after {
+    width: 100%;
+    text-decoration: none;
+}
+
+
+.nav-item {
+    display: inline-block;
+}
+
+header {
+    background-color: rgb(4, 7, 32);
+    height: 80px;
+    position: inherit;
+}
+
+.banner-image {
+
+    width: 1318px;
+    height: 500px;
+}
+
+.dispaly {
+    font-size: 70px;
+}
+
+.Special,
+.Speciel {
+    font-size: 50px;
+    margin-left: 490px;
+    margin-top: 40px;
+}
+
+.Speciel {
+    margin-left: 410px;
+}
+
+.resturent-image {
+    border-radius: 30px;
+    width: 400px;
+    height: 300px;
+}
+
+.cont {
+    margin-top: 90px;
+}
+
+.my-container {
+    border: 2px solid rgb(214, 209, 209);
+    margin-left: 400px;
+    margin-top: 50px;
+    width: 500px;
+    padding-left: 150px;
+    padding-top: 20px;
+}
+
+.image {
+    background-color:rgb(4, 7, 32);
+    
+}
+.fixed-top{
+    
+    background-color:rgb(4, 7, 32) ;
+}
+.blue{
+    margin-left: 300px;
+    margin-bottom: 40px;
+}
+
+.heading{
+    padding-top: 180px !important;
+    padding-left: 30px;
+    font-size:40px;
+    color: rgb(255, 255, 255); 
+}
+
+.button-1 {
+    margin-left: 300px !important;
+    margin-top: 50px !important;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    color: #000000;
+    cursor: pointer;
+    font-family: -apple-system, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.3rem;
+    text-align: center;
+    text-decoration: none;
+     
+}
+
+.button-1:hover {
+    background-color: #f13607;
+    box-shadow: #e49494 0 -6px 8px inset;
+    transform: scale(1.125);
+    color:white;
+}
+.button-2 {
+    margin-left: 50px !important;
+    margin-top: 30px !important;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    color: #000000;
+    cursor: pointer;
+    font-family: -apple-system, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.3rem;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.button-2:hover {
+    background-color: #1877F2;
+    box-shadow: #7299c5 0 -6px 8px inset;
+    transform: scale(1.125);
+    color: white;
+}
+.button-3 {
+    margin-left: 50px !important;
+    margin-top: 30px !important;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    color: #000000;
+    cursor: pointer;
+    font-family: -apple-system, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.3rem;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.button-3:hover {
+    background-color: #1DA1F2;
+    box-shadow: #63a5b6 0 -6px 8px inset;
+    transform: scale(1.125);
+    color:white;
+}
+.button-4 {
+    margin-left: 50px !important;
+    margin-top: 30px !important;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    color: #000000;
+    cursor: pointer;
+    font-family: -apple-system, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.3rem;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.button-4:hover {
+    background: linear-gradient(45deg, #db4c8c, #f3ce5f, #9b4db9);
+    box-shadow: #ffffff 0 -6px 8px inset;
+    transform: scale(1.125);
+    color:white;
+}
+
+
+

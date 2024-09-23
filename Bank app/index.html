@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank app</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<body>
+  <header class="bg-dark ">
+    <div class="row">
+    <h3>🏦</h3>
+    <div class="col-3">
+    <h1 style="color: white;">My bank App </h1>
+    </div>
+    </div>
+    <div class="nav-links">
+    <nav>
+        <div class="row">
+            <div class="home mb-5 nav-item navigation-link">
+            <a href="#home" class="home1 text-white">Home</a>
+            </div>
+            <div class="col-2 mb-5 ml-5 nav-items navigation-link">
+            <a href="#transit" class="home1 text-white">Transaction</a>
+            </div>
+            <div class="col-2 mb-5 nav-items navigation-link">
+            <a href="#contact" class="home1 text-white">Contact</a>
+            </div>
+            
+        </div>
+    </nav>
+    </div>
+    
+  </header> 
+<div class="header-main" style="width: 1303px; height:600px">
+    <div class="row">
+    <img src="bank.jpg" id="main-image"></img>
+    <div class="col-6">
+    <h1 class="heading">“Your financial suite for global success”</h1>
+    </div>
+</div>
+</div>
+  
+<section id="home">
+    <div class="container">
+        <div class="row">
+          <div class="col-6 mt-5"> 
+    <h1>About</h1>
+    <p>"This bank app website offers a seamless and intuitive user experience, combining sleek design with easy navigation. Its
+    clean layout makes managing finances simple and efficient, providing users with clear insights into their income and
+    expenses. The visually appealing interface enhances usability, while the modern, professional look ensures a trustworthy
+    and reliable platform. With a perfect balance of style and functionality, this app sets a new benchmark for financial
+    management solutions."</p>
+    </div>
+    <div class="col-6">
+        <img src="bank2.jfif" id="section-image" style="margin-top: 100px; margin-left: 100px; border-radius: 50px; width:400px;"></img>
+    </div>
+    </div>
+    </div>
+</section>
+<br><br><br><br><br><br><br><br><br><br>
+<br>
+<section id="transit">
+    <div class="container mt-5">
+    <h1>Transaction:</h1>
+    <form style="border: 2px solid gainsboro; margin-top: 80px;margin-left: 200px; width:700px;">
+    <label for="Transaction amount" style="font-size: 30px; padding-left:0px;">Enter Transaction amount:</label>
+    <input type="number" placeholder="Enter amount that you want transact" style="width:500px; color:rgb(255, 0, 0);padding-left: 100px;"><br>
+    <div class="row" style="padding-left: 150px;">
+    <div class="col-3 mt-3">
+    <button type="submit" id="Credit" class="bg-success" >Credit</button><br>
+    </div>
+    <div class="col-3 mt-3">
+    <button type="submit" id="Depit" class="bg-danger">Dredit</button>
+    </div>
+    </div>
+    </form>
+    </div>
+</section>
+<br><br><br><br><br><br><br><br><br><br>
+<br>
+</body>
+</html>

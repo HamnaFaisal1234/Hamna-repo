@@ -19,7 +19,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-    background: #bddbe4;
+    background: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +32,7 @@
 <body>
     
     <div class="wrapper">
-    <h1 class="text-primary d-flex justify-content-center pt-5">Calculator</h1>
+    <h1 class="text-white d-flex justify-content-center pt-5 ">Calculator</h1>
     <div class="container">
      <div class="Calculator">
         <div id="history">
@@ -43,23 +43,25 @@
         </div>
         <input type="result" name="result" class="result" id="result" value="" placeholder="0" readonly style="width:250px; height:50px;"><br>
         <div class="row " >
-        <button type="button" class="operator col-3" id="clear" >C</button>
-        <button type="button" class="operator col-3" id="CE">CE</button>
-        <button type="button" class="operator col-3" id="%">%</button>
-        <button type="button" class="operator col-3" id="%">&#247</button></div>
+        <button type="button" class="operator col-3" style="background-color: aqua;" id="clear" >C</button>
+        <button type="button" class="operator col-3" style="background-color: pink;" id="CE">CE</button>
+        <button type="button" class="operator col-3" style="background-color: rgb(4, 143, 90);" id="%">%</button>
+        <button type="button" class="operator col-3" style="background-color: rgb(230, 110, 140);" id="%">&#247</button></div>
         <div class="row">
         <button type="button" class="number col-3" id="7">7</button>
         <button type="button" class="number col-3" id="8">8</button>
         <button type="button" class="number col-3" id="9">9</button>
-        <button type="button" class="operator col-3" id="*">*</button></div>
+        <button type="button" class="operator col-3" style="background-color: rgb(190, 170, 52);" id="*">*</button></div>
         <div class="row">
         <button type="button" class="number col-3" id="6">6</button>
-        <button type="button" class="operator col-3" id="-">-</button>
-        <button type="button" class="number col-3" id="1">1</button>
-        <button type="button" class="number col-3" id="2">2</button></div>
+        <button type="button" class="number col-3" id="5">5</button>
+        <button type="button" class="number col-3" id="4">4</button>
+        <button type="button" class="operator col-3" style="background-color: rgb(155, 92, 173);" id="-">-</button></div>
         <div class="row">
         <button type="button" class="number col-3" id="3">3</button>
-        <button type="button" class="operator col-3" id="+">+</button></div>
+        <button type="button" class="number col-3" id="2">2</button>
+        <button type="button" class="number col-3" id="1">1</button>
+        <button type="button" class="operator col-3" style="background-color: rgb(69, 235, 138);" id="+">+</button></div>
      </div><br>
     </div></div>
 </body>

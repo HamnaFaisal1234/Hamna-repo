@@ -36,7 +36,7 @@
     </div>
     
   </header> 
-<div class="header-main" style="width: 1303px; height:600px">
+<div class="header-main" style="width: 1343px; height:600px">
     <div class="row">
     <img src="bank.jpg" id="main-image"></img>
     <div class="col-6">
@@ -66,21 +66,84 @@
 <br>
 <section id="transit">
     <div class="container mt-5">
-    <h1>Transaction:</h1>
-    <form style="border: 2px solid gainsboro; margin-top: 80px;margin-left: 200px; width:700px;">
-    <label for="Transaction amount" style="font-size: 30px; padding-left:0px;">Enter Transaction amount:</label>
-    <input type="number" placeholder="Enter amount that you want transact" style="width:500px; color:rgb(255, 0, 0);padding-left: 100px;"><br>
-    <div class="row" style="padding-left: 150px;">
-    <div class="col-3 mt-3">
-    <button type="submit" id="Credit" class="bg-success" >Credit</button><br>
-    </div>
-    <div class="col-3 mt-3">
-    <button type="submit" id="Depit" class="bg-danger">Dredit</button>
-    </div>
-    </div>
-    </form>
+        <h1>Transaction:</h1>
+        <!-- Display Current Account Balance -->
+        <div id="account-balance" style="font-size: 24px; color: blue; margin-top: 20px;">
+            <strong>Account Balance: </strong><span id="balance-amount">0</span>
+        </div>
+
+        <!-- Transaction Form -->
+        <form style="border: 2px solid gainsboro; margin-top: 20px; margin-left: 180px; width: 700px;">
+            <label for="transaction-amount" style="font-size: 30px; margin-left: 20px;">Enter Transaction amount:</label>
+            <input type="number" id="transaction-amount" placeholder="Enter amount you want to transact"
+                style="width: 500px; color: rgb(255, 0, 0); padding-left: 20px; margin-left:100px;">
+            <br>
+            <div class="row" style="padding-left: 200px;">
+                <div class="col-3 mt-3">
+                    <button type="button" id="credit" class="btn bg-success text-white ml-5 mb-4">Credit</button><br>
+                </div>
+                <div class="col-3 mt-3">
+                    <button type="button" id="debit" class="btn bg-danger text-white ml-5 mb-4">Debit</button>
+                </div>
+            </div>
+        </form>
     </div>
 </section>
+
+<script>
+    // Initial account balance
+    let accountBalance = 0;
+
+    // Get references to HTML elements
+    const balanceDisplay = document.getElementById('balance-amount');
+    const transactionInput = document.getElementById('transaction-amount');
+    const creditButton = document.getElementById('credit');
+    const debitButton = document.getElementById('debit');
+
+    // Function to update the balance display
+    function updateBalanceDisplay() {
+        balanceDisplay.textContent = accountBalance;
+    }
+
+    // Add event listener to the Credit button
+    creditButton.addEventListener('click', function () {
+        // Get the transaction amount
+        const transactionAmount = parseFloat(transactionInput.value);
+
+        if (!isNaN(transactionAmount) && transactionAmount > 0) {
+            // Add the amount to the account balance
+            accountBalance += transactionAmount;
+            // Update the displayed balance
+            updateBalanceDisplay();
+            // Clear the input field
+            transactionInput.value = '';
+        } else {
+            alert('Please enter a valid amount to credit.');
+        }
+    });
+
+    // Add event listener to the Debit button
+    debitButton.addEventListener('click', function () {
+        // Get the transaction amount
+        const transactionAmount = parseFloat(transactionInput.value);
+
+        if (!isNaN(transactionAmount) && transactionAmount > 0) {
+            // Check if the balance is sufficient for the debit
+            if (accountBalance >= transactionAmount) {
+                // Subtract the amount from the account balance
+                accountBalance -= transactionAmount;
+                // Update the displayed balance
+                updateBalanceDisplay();
+            } else {
+                alert('Insufficient balance!');
+            }
+            // Clear the input field
+            transactionInput.value = '';
+        } else {
+            alert('Please enter a valid amount to debit.');
+        }
+    });
+</script>
 <br><br><br><br><br><br><br><br><br><br>
 <br>
 </body>

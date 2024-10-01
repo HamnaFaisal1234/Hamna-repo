@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+</head>
 <body>
   <header class="bg-dark ">
     <div class="row">
@@ -24,12 +24,10 @@
             <div class="home mb-5 nav-item navigation-link">
             <a href="#home" class="home1 text-white">Home</a>
             </div>
-            <div class="col-2 mb-5 ml-5 nav-items navigation-link">
+            <div class="col-4 mb-5 ml-5 nav-items navigation-link">
             <a href="#transit" class="home1 text-white">Transaction</a>
             </div>
-            <div class="col-2 mb-5 nav-items navigation-link">
-            <a href="#contact" class="home1 text-white">Contact</a>
-            </div>
+            
             
         </div>
     </nav>
@@ -75,8 +73,8 @@
         <!-- Transaction Form -->
         <form style="border: 2px solid gainsboro; margin-top: 20px; margin-left: 180px; width: 700px;">
             <label for="transaction-amount" style="font-size: 30px; margin-left: 20px;">Enter Transaction amount:</label>
-            <input type="number" id="transaction-amount" placeholder="Enter amount you want to transact"
-                style="width: 500px; color: rgb(255, 0, 0); padding-left: 20px; margin-left:100px;">
+            <input type="number" id="transaction-amount" placeholder="Enter amount you want to transact / debit"
+                style="width: 500px; color: rgb(11, 90, 23); padding-left: 20px; margin-left:100px;">
             <br>
             <div class="row" style="padding-left: 200px;">
                 <div class="col-3 mt-3">
@@ -86,11 +84,14 @@
                     <button type="button" id="debit" class="btn bg-danger text-white ml-5 mb-4">Debit</button>
                 </div>
             </div>
+            <div id="message-display" style="margin-top: 20px;margin-left: 250px; font-size: 18px;color:red"></div>
         </form>
     </div>
+    
 </section>
 
 <script>
+
     // Initial account balance
     let accountBalance = 0;
 
@@ -99,6 +100,11 @@
     const transactionInput = document.getElementById('transaction-amount');
     const creditButton = document.getElementById('credit');
     const debitButton = document.getElementById('debit');
+    const Message = document.getElementById('message-display');
+    
+        // Event listeners for Credit and Debit buttons
+        document.getElementById('credit').addEventListener('click', () => handleTransaction('Credit'));
+        document.getElementById('debit').addEventListener('click', () => handleTransaction('Debit'));
 
     // Function to update the balance display
     function updateBalanceDisplay() {
@@ -118,9 +124,15 @@
             // Clear the input field
             transactionInput.value = '';
         } else {
-            alert('Please enter a valid amount to credit.');
+            
+            Message.textContent = "please enter valid amount";
+            Message.color="red";
+            setTimeout(()=>{
+                Message.textContent = "";}, 3000)
+
+            }
         }
-    });
+    )
 
     // Add event listener to the Debit button
     debitButton.addEventListener('click', function () {
@@ -134,17 +146,27 @@
                 accountBalance -= transactionAmount;
                 // Update the displayed balance
                 updateBalanceDisplay();
-            } else {
-                alert('Insufficient balance!');
+            } else if (!isNaN(transactionAmount) && transactionAmount > 0) {
+                Message.textContent = "Insufficient balance!";
+                Message.color = "red";
+                setTimeout(() => {
+                    Message.textContent = "";
+                }, 3000)
             }
             // Clear the input field
             transactionInput.value = '';
         } else {
-            alert('Please enter a valid amount to debit.');
+            Message.textContent = "Please enter valid amount";
+            Message.color = "red";
+            setTimeout(() => {
+                Message.textContent = "";
+            }, 3000)
         }
     });
 </script>
 <br><br><br><br><br><br><br><br><br><br>
 <br>
+<script src="script.js"></script>
+
 </body>
 </html>

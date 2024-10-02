@@ -1,0 +1,8 @@
+print("My name is hamna")
+print(2+3)
+print("This is a result" + " of addition", 2+2 )
+a=21
+print(type(a))
+# this is a type of string 
+b="a"
+print(type(b))

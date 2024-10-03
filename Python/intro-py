@@ -5,4 +5,4 @@ a=21
 print(type(a))
 # this is a type of string 
 b="a"
-print(type(b))
+print(type(b)) 
